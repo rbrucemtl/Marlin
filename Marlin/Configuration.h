@@ -161,7 +161,7 @@
 #define Z_DRIVER_TYPE  TMC2209
 //#define X2_DRIVER_TYPE A4988
 //#define Y2_DRIVER_TYPE A4988
-//#define Z2_DRIVER_TYPE A4988
+#define Z2_DRIVER_TYPE TMC2209
 //#define Z3_DRIVER_TYPE A4988
 //#define Z4_DRIVER_TYPE A4988
 //#define I_DRIVER_TYPE  A4988
@@ -1227,7 +1227,7 @@
  * A Fix-Mounted Probe either doesn't deploy or needs manual deployment.
  *   (e.g., an inductive probe or a nozzle-based probe-switch.)
  */
-//#define FIX_MOUNTED_PROBE
+#define FIX_MOUNTED_PROBE
 
 /**
  * Use the nozzle as the probe, as with a conductive
@@ -1526,7 +1526,7 @@
 // @section machine
 
 // Invert the stepper direction. Change (or reverse the motor connector) if an axis goes the wrong way.
-#define INVERT_X_DIR false
+#define INVERT_X_DIR true
 #define INVERT_Y_DIR true
 #define INVERT_Z_DIR false
 //#define INVERT_I_DIR false
@@ -1756,7 +1756,7 @@
 /**
  * Auto-leveling needs preheating
  */
-#define PREHEAT_BEFORE_LEVELING
+//#define PREHEAT_BEFORE_LEVELING
 #if ENABLED(PREHEAT_BEFORE_LEVELING)
   #define LEVELING_NOZZLE_TEMP 120   // (°C) Only applies to E0 at this time
   #define LEVELING_BED_TEMP     110
@@ -1881,7 +1881,7 @@
 #endif
 
 // Add a menu item to move between bed corners for manual bed adjustment
-//#define LCD_BED_TRAMMING
+#define LCD_BED_TRAMMING
 
 #if ENABLED(LCD_BED_TRAMMING)
   #define BED_TRAMMING_INSET_LFRB { 30, 30, 30, 30 } // (mm) Left, Front, Right, Back insets
